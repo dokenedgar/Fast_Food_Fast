@@ -31,6 +31,21 @@
     float:left;
     width: 10%;
 }
+.msg-inbox{
+ margin: 5px;
+ width: 40%;
+ float: left;
+}
+.msg-send{
+    
+    
+    display: inline;
+    text-align: center;
+}
+.msg-admin{
+    border: 1px solid #403737;
+}
+
 .menu-title h3{
     margin: 0;
     padding: 0;
@@ -50,6 +65,22 @@ td, th {
 
 tr:nth-child(even) {
     background-color: darkgray;
+}
+
+#inbox table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-left: 1px solid darkgray;
+}
+
+#inbox td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+#inbox tr:nth-child(even) {
+    background-color: lightgray;
 }
 
 #checkout {

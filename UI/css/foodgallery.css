@@ -7,15 +7,17 @@
 }
 .menu-title{
     display: inline;
-    margin: 0;
-    
+    margin: 0;    
 }
+
 .menu-img{
     color: red;
     float:left;
     margin: 5px;
     width: 20%;
 }
+
+
 .menu-img img{
     width: 100%;
 }
@@ -32,6 +34,22 @@
 .menu-title h3{
     margin: 0;
     padding: 0;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid darkgray;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
 }
 
 #checkout {

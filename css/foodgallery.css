@@ -31,6 +31,7 @@
     float:left;
     width: 10%;
 }
+
 .msg-inbox{
  margin: 5px;
  width: 40%;
@@ -78,7 +79,10 @@ tr:nth-child(even) {
     text-align: left;
     padding: 8px;
 }
-
+#inbox th {
+    text-align: center;
+    padding: 8px;
+}
 #inbox tr:nth-child(even) {
     background-color: lightgray;
 }
@@ -88,12 +92,15 @@ tr:nth-child(even) {
   right: 0 ;
   top: 1;
   z-index: 1 ;
+  text-align: center;
+  display: block;
    width: 400px;
     border: 3px solid #403737;
+    background-color: #ffffff;
 }
 
 #checkout button{
-    background-color: green;
+    background-color: #403737;
     font-size: 25px;
     border: none;
     margin-top: 0px;
@@ -107,11 +114,14 @@ tr:nth-child(even) {
     font-size: 25px;
     margin-top: 5px;
     color: #403737;
-    padding: 15px;
+    padding: 5px;
     width: 90%;
     text-align: center;
     text-transform: uppercase;
 }
+#checkout p{
+        
+    }
 @media (max-width: 768px) {
     .menu-img, .menu-name, .menu-add{
         float: none;

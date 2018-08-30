@@ -3,7 +3,32 @@
 .menu-group{
     display: inline;
     margin: 0;
-    
+}
+.menu-group button{
+    background-color: #403737;
+    font-size: 25px;
+    border: none;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: white;
+    padding: 0px;
+    width: 25%;
+}
+.menu-group input {
+    font-size: 22px;
+    margin: 0px;
+    border-radius: 10px;
+    border: solid;
+    text-align: center;
+    width: 30px;
+}
+.checkbx {
+    font-size: 30px;
+    margin: 0px;
+    border-radius: 10px;
+    border: solid;
+    text-align: center;
+    width: 30px;
 }
 .menu-title{
     display: inline;
@@ -92,14 +117,45 @@ tr:nth-child(even) {
   right: 0 ;
   top: 1;
   z-index: 1 ;
-  text-align: center;
+  text-align: right;
   display: block;
+  font-size: 20px;
    width: 400px;
     border: 3px solid #403737;
     background-color: #ffffff;
 }
 
-#checkout button{
+#checkout button {
+    background-color: #403737;
+    font-size: 15px;
+    border: none;
+    margin: 3px;
+    border-radius: 15px;
+    color: white;
+    padding: 5px;
+    width: 8%;
+}
+
+#checkout input {
+    font-size: 22px;
+    margin: 3px;
+    border-radius: 10px;
+    border: solid;
+    text-align: center;
+    width: 30px;
+
+}
+
+#checkout .total input {
+    font-size: 22px;
+    margin: 3px;
+    border-radius: 10px;
+    border: solid;
+    text-align: center;
+    width: 99%;
+
+}
+    #checkout .submitorder button{
     background-color: #403737;
     font-size: 25px;
     border: none;
@@ -107,7 +163,8 @@ tr:nth-child(even) {
     border-radius: 0px;
     color: white;
     padding: 15px;
-    width: 100%;
+    margin: 0px;
+    width: 99%;
 }
 #checkout h2{
     background-color: white;

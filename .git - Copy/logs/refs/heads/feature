@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 601989952e4d342bdbfbfd4d15c42cf65f464ecf Doken Edgar <dokenedgarjr@gmail.com> 1535567214 +0100	branch: Created from master
+601989952e4d342bdbfbfd4d15c42cf65f464ecf 023d65dfd9405181ed99b51612836302887908a1 Doken Edgar <dokenedgarjr@gmail.com> 1535567377 +0100	commit: changed picture in menu
+023d65dfd9405181ed99b51612836302887908a1 56a9c3b4c02edc1870e80992daca7b67eeb6ee69 Doken Edgar <dokenedgarjr@gmail.com> 1535581063 +0100	commit: created history.html for customrt to view past orders
+56a9c3b4c02edc1870e80992daca7b67eeb6ee69 b7658e215f490da0482d804f37b620977e422165 Doken Edgar <dokenedgarjr@gmail.com> 1535584723 +0100	commit: created a page for user to send and reveive msg with admin
+b7658e215f490da0482d804f37b620977e422165 e376cd0b02d50d080f0ccfcbfd5ba1a62af26082 Doken Edgar <dokenedgarjr@gmail.com> 1535586187 +0100	commit: added feature for checking/changing status of order by admin

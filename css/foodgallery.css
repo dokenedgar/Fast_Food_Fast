@@ -7,15 +7,17 @@
 }
 .menu-title{
     display: inline;
-    margin: 0;
-    
+    margin: 0;    
 }
+
 .menu-img{
     color: red;
     float:left;
     margin: 5px;
     width: 20%;
 }
+
+
 .menu-img img{
     width: 100%;
 }
@@ -29,9 +31,56 @@
     float:left;
     width: 10%;
 }
+.msg-inbox{
+ margin: 5px;
+ width: 40%;
+ float: left;
+}
+.msg-send{
+    
+    
+    display: inline;
+    text-align: center;
+}
+.msg-admin{
+    border: 1px solid #403737;
+}
+
 .menu-title h3{
     margin: 0;
     padding: 0;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid darkgray;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
+}
+
+#inbox table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-left: 1px solid darkgray;
+}
+
+#inbox td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+#inbox tr:nth-child(even) {
+    background-color: lightgray;
 }
 
 #checkout {

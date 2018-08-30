@@ -163,7 +163,7 @@ button{
     padding: 15px;
     width: 50%;
 }
-input{
+input, textarea {
     font-size: 30px;
     margin: 20px;
     border-radius: 10px;
@@ -230,8 +230,10 @@ header li{
     width: 100%;
     margin-top: 20px;
 	}
-	input, label {
-    width: 100%;
+	input, textarea, label, #signup {
+    width: 90%;
     margin-top: 20px;
     margin: auto;
 	}
+	
+}

@@ -163,13 +163,21 @@ button{
     padding: 15px;
     width: 50%;
 }
-input, textarea {
+input {
     font-size: 30px;
     margin: 20px;
     border-radius: 10px;
     border: solid;
     text-align: center;
-
+}
+textarea {
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    border: solid;
+    text-align: center;
+    columns: 15;
+    
 }
 
 

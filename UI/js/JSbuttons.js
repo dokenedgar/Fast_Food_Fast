@@ -21,6 +21,7 @@ function sendMsg () {
 	window.location.href = './dashboard.html';
 }
 
+
 function adminsignin (argument) {
 	let username = document.getElementById("txtusername").value;
 	let password = document.getElementById("txtpassword").value;

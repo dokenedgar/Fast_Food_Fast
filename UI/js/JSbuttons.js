@@ -22,7 +22,7 @@ function sendMsg () {
 }
 
 
-function adminsignin (argument) {
+function adminsignin () {
 	let username = document.getElementById("txtusername").value;
 	let password = document.getElementById("txtpassword").value;
 

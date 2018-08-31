@@ -6,7 +6,7 @@ function signIn () {
 	let password = document.getElementById("txtpassword").value;
 
 	if (username.lenth < 5 || password.length < 5) {
-		window.alert("incorrect");
+		window.alert("incorrect"); 
 	}
 	else {
 		window.location.href = './dashboard.html';

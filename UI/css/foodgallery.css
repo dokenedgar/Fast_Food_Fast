@@ -1,142 +1,195 @@
-
-
-.menu-group{
-    display: inline;
-    margin: 0;
-    
+.menu-group {
+  display: inline;
+  margin: 0;
 }
-.menu-title{
-    display: inline;
-    margin: 0;    
+.menu-group button {
+  background-color: #403737;
+  font-size: 25px;
+  border: none;
+  margin-top: 50px;
+  border-radius: 10px;
+  color: white;
+  padding: 0px;
+  width: 25%;
 }
-
-.menu-img{
-    color: red;
-    float:left;
-    margin: 5px;
-    width: 20%;
+.menu-group input {
+  font-size: 22px;
+  margin: 0px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+  width: 30px;
 }
-
-
-.menu-img img{
-    width: 100%;
+.checkbx {
+  font-size: 30px;
+  margin: 0px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+  width: 30px;
 }
-.menu-name{
- margin: 5px;
- width: 40%;
- float: left;
-}
-.menu-add{
-    margin: 5px;
-    float:left;
-    width: 10%;
-}
-
-.msg-inbox{
- margin: 5px;
- width: 40%;
- float: left;
-}
-.msg-send{
-    
-    
-    display: inline;
-    text-align: center;
-}
-.msg-admin{
-    border: 1px solid #403737;
+.menu-title {
+  display: inline;
+  margin: 0;
 }
 
-.menu-title h3{
-    margin: 0;
-    padding: 0;
+.menu-img {
+  color: red;
+  float: left;
+  margin: 5px;
+  width: 20%;
+}
+
+.menu-img img {
+  width: 100%;
+}
+.menu-name {
+  margin: 5px;
+  width: 40%;
+  float: left;
+}
+.menu-add {
+  margin: 5px;
+  float: left;
+  width: 10%;
+}
+
+.msg-inbox {
+  margin: 5px;
+  width: 40%;
+  float: left;
+}
+.msg-send {
+  display: inline;
+  text-align: center;
+}
+.msg-admin {
+  border: 1px solid #403737;
+}
+
+.menu-title h3 {
+  margin: 0;
+  padding: 0;
 }
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td, th {
-    border: 1px solid darkgray;
-    text-align: left;
-    padding: 8px;
+td,
+th {
+  border: 1px solid darkgray;
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: darkgray;
+  background-color: darkgray;
 }
 
 #inbox table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border-left: 1px solid darkgray;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-left: 1px solid darkgray;
 }
 
-#inbox td, th {
-    text-align: left;
-    padding: 8px;
+#inbox td,
+th {
+  text-align: left;
+  padding: 8px;
 }
 #inbox th {
-    text-align: center;
-    padding: 8px;
+  text-align: center;
+  padding: 8px;
 }
 #inbox tr:nth-child(even) {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 #checkout {
-  position: fixed ;
-  right: 0 ;
+  position: fixed;
+  right: 0;
   top: 1;
-  z-index: 1 ;
-  text-align: center;
+  z-index: 1;
+  text-align: right;
   display: block;
-   width: 400px;
-    border: 3px solid #403737;
-    background-color: #ffffff;
+  font-size: 20px;
+  width: 400px;
+  border: 3px solid #403737;
+  background-color: #ffffff;
 }
 
-#checkout button{
-    background-color: #403737;
-    font-size: 25px;
-    border: none;
-    margin-top: 0px;
-    border-radius: 0px;
-    color: white;
-    padding: 15px;
-    width: 100%;
+#checkout button {
+  background-color: #403737;
+  font-size: 15px;
+  border: none;
+  margin: 3px;
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+  width: 8%;
 }
-#checkout h2{
-    background-color: white;
-    font-size: 25px;
-    margin-top: 5px;
-    color: #403737;
-    padding: 5px;
-    width: 90%;
-    text-align: center;
-    text-transform: uppercase;
+
+#checkout input {
+  font-size: 22px;
+  margin: 3px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+  width: 30px;
 }
-#checkout p{
-        
-    }
+
+#checkout .total input {
+  font-size: 22px;
+  margin: 3px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+  width: 99%;
+}
+#checkout .submitorder button {
+  background-color: #403737;
+  font-size: 25px;
+  border: none;
+  margin-top: 0px;
+  border-radius: 0px;
+  color: white;
+  padding: 15px;
+  margin: 0px;
+  width: 99%;
+}
+#checkout h2 {
+  background-color: white;
+  font-size: 25px;
+  margin-top: 5px;
+  color: #403737;
+  padding: 5px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+}
+#checkout p {
+}
 @media (max-width: 768px) {
-    .menu-img, .menu-name, .menu-add{
-        float: none;
-    }
-    .menu-title{
-        display: none;
-    }
-    .menu-img img{
+  .menu-img,
+  .menu-name,
+  .menu-add {
+    float: none;
+  }
+  .menu-title {
+    display: none;
+  }
+  .menu-img img {
     width: 200px;
-    }
-    #checkout/*button first*/ {
-  position: fixed ;
-  bottom: 0;
-  z-index: 1 ;
-   width: 100%;
+  }
+  #checkout {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
     border: 3px solid #403737;
-}
+  }
 }

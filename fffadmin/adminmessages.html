@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fast Food Fast | Messages</title>
+  <link rel="stylesheet" type="text/css" href="../UI/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../UI/css/foodgallery.css">
+</head>
+
+<body>
+  <header>
+    <div class="headnav">
+      <div class="container">
+        <div id="brandname">
+          <h1>Fast Food Fast</h1>
+        </div>
+        <nav>
+          <ul>
+
+            <li><a href="admindashboard.html">All Orders</a></li>
+            <li><a href="foodlist.html">Food List</a></li>
+            <li><a href="addfood.html">Add Food</a></li>
+            <li><a href="editfood.html">Edit Food</a></li>
+            <li><a href="deletefood.html">Delete Food</a></li>
+            <li><a href="history.html">Customers</a></li>
+            <li class="current"><a href="adminmessages.html">Messages</a></li>
+            <li><a href="index.html">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Messages</h1>
+  </div>
+  <div class="container">
+
+    <table id="inbox">
+      <tr>
+        <th>s/n</th>
+        <th>UserID</th>
+        <th>Message</th>
+        <th>Received</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>FFF0Ab1</td>
+        <td>Sequel to your order on Thursday 23 August 2018, we regret to inform you that we cannot complete it a there was shortage of shrimps. Our sincere apologies</td>
+        <td>23-08-2018 15:45</td>
+        <td><a href="">Reply</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>FFF0Ab1</td>
+        <td>We are pleased to inform you that we have started home deliveries of orders from 2,000 Naira upwards. Make your order and enjoy this service</td>
+        <td>01-06-2018 09:00</td>
+        <td><a href="">Reply</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>FFF0Ab1</td>
+        <td>Your order of Rice and burger of Monday 4th April has been completed. Thank you for using our service</td>
+        <td>4-4-2018 17:09</td>
+        <td><a href="">Reply</a></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>FFF0Ab1</td>
+        <td>Welcome to Fast Food Fast. Thank you for registering and we hope you have a wonderful experience with us</td>
+        <td>15-03-2018 11:23</td>
+        <td><a href="">Reply</a></td>
+      </tr>
+    </table><br>
+
+  </div>
+  <div class="container">
+    <div id="signup">
+      <h1>Send Message to A User</h1>
+
+      <label>Reseivers User ID:</label>
+      <input type="text">
+      <label>Message:</label>
+      <textarea></textarea>
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/JSbuttons.js"></script>
+  <footer>
+    <p>Fast Food Fast Copyright &copy; 2018</p>
+  </footer>
+
+</body>
+
+</html>

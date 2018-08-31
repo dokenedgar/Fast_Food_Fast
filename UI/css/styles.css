@@ -1,239 +1,239 @@
 /*{}*/
 
-body{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	padding: 0;
-	margin: 0;
-	background-color: #f4f4f4;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
 }
 /*Global*/
-.container{
-	width: 80%;
-	margin: auto;
-	overflow: hidden;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
-h1{
-	text-align: center;
-
+h1 {
+  text-align: center;
 }
 
-ul{
-	margin: 0;
-	padding: 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
 /*Header*/
-header{
-	background: url('../images/chef.jpg') no-repeat 0 -250px;
-	color: #ffffff;
-	min-width: 70px;
+header {
+  background: url("../images/chef.jpg") no-repeat 0 -250px;
+  color: #ffffff;
+  min-width: 70px;
 }
 
-header a{
-	color: #ffffff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
-header li{
-	float: left;
-	display: inline;
-	padding: 0 20px 0 20px;
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
 }
 
-.headnav{	
-	background-color: #403737;
-	opacity: 0.7;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	}
-
-header #brandname{
-	float: left;
-
-	
+.headnav {
+  background-color: #403737;
+  opacity: 0.7;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-header #brandname h1{
-	margin: 0;
-	opacity: 1;
+header #brandname {
+  float: left;
 }
 
-header nav{
-	float: right;
-	margin-top: 10px;
-
+header #brandname h1 {
+  margin: 0;
+  opacity: 1;
 }
 
-header .highlight, header .current a{
-	color: #000000;
-	font-weight: bold;
+header nav {
+  float: right;
+  margin-top: 10px;
 }
 
-header a:hover{
-	color:#ccccccc;
-	font-weight: bold;
+header .highlight,
+header .current a {
+  color: #000000;
+  font-weight: bold;
 }
 
-#welcome{
-	display: block;
+header a:hover {
+  color: #ccccccc;
+  font-weight: bold;
+}
+
+#welcome {
+  display: block;
 }
 /*Showcase*/
-#showcase{
-	min-height: 400px;
-	text-align: center;
-	color: #403737;
+#showcase {
+  min-height: 400px;
+  text-align: center;
+  color: #403737;
 }
 
-#showcase h1{
-	margin-top: 100px;
-	font-size: 55px;
-	margin-bottom: 10px;
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
 }
 
-#showcase p{
-	font-size: 20px;
+#showcase p {
+  font-size: 20px;
 }
-
-
 
 /*Boxes*/
-#boxes{
-	margin-left: 5%;
+#boxes {
+  margin-left: 5%;
 }
 
-#boxes .box{
-	float: left;
-	width: 30%;
-	padding: 10px;
-	text-align: center;
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
 }
 
-#boxes h2{
-	font-size: 30px;
-	text-align: center;
-	text-transform: uppercase;
+#boxes h2 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
-#boxes .box img{
-	width: 90px;
-}
-
-#boxes .box a{
-	text-decoration: none;
-	color: #403737;
+#boxes .box img {
+  width: 90px;
 }
 
-.quickwrapper{
-	padding: 10px;
-	background-color: #000000;
+#boxes .box a {
+  text-decoration: none;
+  color: #403737;
 }
 
- .quicklinks{
-	display: inline-block;
-	padding: 20px;
-	width: 30%;
-	color: #ffffff;
-	
+.quickwrapper {
+  padding: 10px;
+  background-color: #000000;
 }
 
+.quicklinks {
+  display: inline-block;
+  padding: 20px;
+  width: 30%;
+  color: #ffffff;
+}
 
 /*signup*/
-#signup{
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	font-size: 16px;
+#signup {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 16px;
 }
 
 #signup label {
-	font-size: 20px;
-	display: block;
+  font-size: 20px;
+  display: block;
 }
 
-button{
-    background-color: #403737;
-    font-size: 25px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 12px;
-    color: white;
-    padding: 15px;
-    width: 50%;
+button {
+  background-color: #403737;
+  font-size: 25px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 12px;
+  color: white;
+  padding: 15px;
+  width: 50%;
 }
-input, textarea {
-    font-size: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    border: solid;
-    text-align: center;
-
+input {
+  font-size: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
 }
-
+textarea {
+  font-size: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+  columns: 15;
+}
 
 /*Footer*/
-footer{
-	padding:20px;
-  	margin-top:20px;  
-	color: #ffffff;
-	background-color: #403737;
-	text-align: center;
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #403737;
+  text-align: center;
 }
 
 /*Main-col*/
-article#main-col{
-	float: left;
-	width: 65%;
+article#main-col {
+  float: left;
+  width: 65%;
 }
 
-
-
 /*Services*/
-ul#services li{
-	list-style: none;
-	padding: 20px;
-	border: #cccccc solid 1px;
-	margin-bottom: 5px;
-	background: #e6e6e6;
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
 }
 
 /*Media Queries*/
 /*Responsiveness is mostly removing floats*/
 @media (max-width: 768px) {
-	header #brandname, header nav, header nav li, #boxes .box,
-	article#main-col{
-		float: none;
-		text-align: center;
-		width: 100%;
-	}
+  header #brandname,
+  header nav,
+  header nav li,
+  #boxes .box,
+  article#main-col {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
 
-	header{
-		
-		background: url('../images/chef.jpg');
-    	background-repeat: no-repeat;
-    	background-size: auto;
-		padding-bottom: 20px;
-	}
-header li{
-	float: none;
-	text-align: center;
-	display: block;
-	
-}
-	#showcase h1{
-		margin-top: 40px;
-	}
+  header {
+    background: url("../images/chef.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-bottom: 20px;
+  }
+  header li {
+    float: none;
+    text-align: center;
+    display: block;
+  }
+  #showcase h1 {
+    margin-top: 40px;
+  }
 
-	button{
+  button {
     width: 100%;
     margin-top: 20px;
-	}
-	input, textarea, label, #signup {
+  }
+  input,
+  textarea,
+  label,
+  #signup {
     width: 90%;
     margin-top: 20px;
     margin: auto;
-	}
-	
+  }
 }

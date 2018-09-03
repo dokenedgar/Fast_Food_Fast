@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Fast Food Fast | Sign Up</title>
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
 	<header>
@@ -27,20 +27,22 @@
 	<div class="container">
 		<div id="signup">
 			<h1>Sign Up Here</h1>
-			<label>Enter Name:</label>
-	        <input type="text">
-
-	        <label>Enter Phone:</label>
-	        <input type="nu">
-	        <label>Enter Username:</label>
-	        <input type="text">
-	        <label>Enter Password:</label>
-	        <input type="password"><br>
+			<label>First Name:</label>
+	        <input type="text" id="txtFname">
+	        <label>Surname:</label>
+	        <input type="text" id="txtSname">
+	        <label>Phone:</label>
+	        <input type="number" id="txtPhoneNum">
+	        <label>Username:</label>
+	        <input type="text" id="txtUsername" >
+	        <label>Password:</label>
+	        <input type="password" id="txtPassword" required><br>
 	        <button onclick="signUp()" id="buttonSignup">Submit</button>
 		</div>
+		<p id="errors"></p>
 	</div>
 
-	<script type="text/javascript" src="./js/JSbuttons.js"></script>
+	<script type="text/javascript" src="/JSbuttons.js"></script>
 	<footer>
 		<p>Fast Food Fast Copyright &copy; 2018</p>
 	</footer>

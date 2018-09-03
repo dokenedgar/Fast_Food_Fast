@@ -36,8 +36,28 @@ app.get('/signin.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/signin.html'));
 });
 
+app.get('/signin/:uname/:pword',(req, res) => {
+	let result = {userFound:false};
+	const signInUser = {
+		username:req.params.uname, password:req.params.pword
+	};
+	users.forEach( function(element) {
+		if ((element.username === signInUser.username) && (element.pword === signInUser.password)) {
+			//user present
+			result.userFound = true;
+			//res.send(signInUser);
+		}
+	});
+	res.send(result);
+		
+});
+
 app.get('/api/v1/:user/dashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/dashboard.html'));
+});
+
+app.get('/logout', (req,res) => {
+	res.sendFile(path.join(__dirname+'/UI/signin.html'));
 });
 
 //get users

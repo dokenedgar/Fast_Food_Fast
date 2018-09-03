@@ -1,15 +1,28 @@
 let btnSignin = document.getElementById("buttonSignin");
 let btnSignup = document.getElementById("buttonsignup");
+let signInerrors = document.getElementById('errors');
 
 function signIn () {
-	let username = document.getElementById("txtusername").value;
-	let password = document.getElementById("txtpassword").value;
+	let user_name = document.getElementById("txtusername").value;
+	let pass_word = document.getElementById("txtpassword").value;
 
-	if (username.lenth < 5 || password.length < 5) {
-		window.alert("Input less than 5"); 
+	if (user_name.length < 5 || pass_word.length < 5) {
+		signInerrors.innerHTML = 'Username and password have to be at least 5 characters'
 	}
 	else {
-		window.location.href = './dashboard.html';
+				//Send data to server
+		fetch('http://localhost:4500/signin/'+user_name+'/'+pass_word)
+		.then((resp) =>  resp.json())
+		.then((data) => { let user = JSON.parse(JSON.stringify(data));
+			//console.log(user)
+							if (user.userFound) {
+								window.location.href = '/api/v1/'+user_name+'/dashboard.html';
+							}
+							else {
+								signInerrors.innerHTML = 'Username or password incorrect';
+							}
+						 })
+		.catch((err) => console.log(err))//window.alert(err))//
 	}
 }
 

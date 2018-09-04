@@ -4,7 +4,8 @@
   "description": "FFF testing\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DAPI ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "request": "^2.88.0"
   }
 }

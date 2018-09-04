@@ -12,6 +12,8 @@ let users = [
 			{fname: 'David', sname: 'McKenxie', phone:'09876543211', username: 'McDave', pword: 'pword'}
 		];
 
+let orders = [];
+
 app.get('/', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
@@ -56,14 +58,24 @@ app.get('/api/v1/:user/dashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/dashboard.html'));
 });
 
+app.post('/api/v1/:user/placeOrder', (req,res) => {
+	//const newUser = {
+	//	fname:req.body.fname, sname:req.body.sname, phone:req.body.phone, username:req.body.username, pword:req.body.pword
+	//};
+	//users.push(newUser);
+	res.send('perfect');
+
+});
+
 app.get('/logout', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/signin.html'));
 });
 
 //get users
 app.get('/users',(req, res) => {
-	res.send(users);
+	res.status(200).send(users);
 });
 
+let server = app.listen(4500);
 
-app.listen(4500);
+module.exports = server;

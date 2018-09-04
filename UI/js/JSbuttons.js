@@ -1,3 +1,4 @@
+
 let btnSignin = document.getElementById("buttonSignin");
 let btnSignup = document.getElementById("buttonsignup");
 let signInerrors = document.getElementById('errors');
@@ -102,3 +103,4 @@ function adminsignin (argument) {
 		window.location.href = './admindashboard.html';
 	}
 }
+

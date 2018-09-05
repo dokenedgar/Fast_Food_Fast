@@ -8,7 +8,6 @@
   },
   "repository": {
     "type": "git"
-    
   },
   "author": "Doken Edgar",
   "license": "ISC",
@@ -17,7 +16,9 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "request": "^2.88.0"
   },
   "engines": {

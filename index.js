@@ -163,6 +163,6 @@ app.get('/api/v1/admin/admindashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
 
-let server = app.listen(4500);
+let server = app.listen(80);
 
 module.exports = server;

@@ -138,7 +138,7 @@ app.post('/api/v1/:user/placeOrder', (req,res) => {
 	console.log(req.body);
 	let order_ID = Math.floor(Math.random() * 12345);
 	const newOrder = {
-		orderID:order_ID+req.params.user, user:req.params.user, order: req.body, status:pending
+		orderID:order_ID+req.params.user, user:req.params.user, order: req.body, status:"pending"
 	};
 	orders.push(newOrder);
 	res.send(orders);

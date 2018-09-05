@@ -82,7 +82,7 @@ const expect  = require("chai").expect;
 
   describe('Admin Login', function () {
   	it('Should be able to reach admin login endpoint', function (done) {
-  		request('https://dokenedgar.herokuapp.com/api/v2/admin', function (error, response, body) {
+  		request('https://dokenedgar.herokuapp.com/admin', function (error, response, body) {
   			expect(response.statusCode).to.equal(200);
   			done();
   		})

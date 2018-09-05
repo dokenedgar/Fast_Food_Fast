@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fast Food Fast | Admin Dashboard</title>
-  <link rel="stylesheet" type="text/css" href="../UI/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="../UI/css/foodgallery.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/foodgallery.css">
 </head>
 <body>
   <header>
@@ -35,8 +35,9 @@
 	</div>
 <div class="container">
 	
-<table>
+<table id="adminOrders" >
   <tr>
+    <th>OrderID</th>
     <th>UserID</th>
     <th>Food</th>
     <th>Quantity</th>
@@ -125,9 +126,8 @@
   
   
 </table>
-
-		
 	</div>
+  <script src="./js/adminOrders.js"></script> 
 
 
 

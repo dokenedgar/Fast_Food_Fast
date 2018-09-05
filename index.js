@@ -2,6 +2,12 @@ let express = require('express');
 let app = express();
 let path = require('path');
 
+// Get the port:
+const PORT = process.env.PORT || 3000;
+// Listen on the port:
+
+
+
 app.use(express.static(__dirname +'/UI/css'));
 app.use(express.static(__dirname +'/UI/images/'));
 app.use(express.static(__dirname +'/UI/js/'));
@@ -27,8 +33,8 @@ let messagesFromAdmin = [
 
 
 app.get('https://dokenedgar.herokuapp.com/', (req,res) => {
-	res.sendFile(path.join('dokenedgar.herokuapp.com/'+'/UI/index.html'));
-	//res.sendFile(path.join('/UI/index.html'));
+	//res.sendFile(path.join('dokenedgar.herokuapp.com/'+'/UI/index.html'));
+	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
 
 app.get('/index.html', (req,res) => {
@@ -163,6 +169,7 @@ app.get('/api/v1/admin/admindashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
 
-let server = app.listen(80);
+//let server = app.listen(80);
+app.listen(PORT, () => console.log('Listening on', PORT));
 
-module.exports = server;
+//module.exports = server;

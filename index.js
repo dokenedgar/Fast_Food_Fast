@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname +'/UI/css'));
 app.use(express.static(__dirname +'/UI/images/'));
 app.use(express.static(__dirname +'/UI/js/'));
+app.use(express.static(__dirname +'/fffadmin/js/'));
 app.use(express.json());
 
 let users = [

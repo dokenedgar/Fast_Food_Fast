@@ -189,7 +189,7 @@ app.get('/api/v2/admin/userorders/:order', (req,res) => {
 app.get('/api/v2/admin/orders/:order', (req,res) => {
 	let order = [];
 		orders.forEach( function(element, index) {
-		if (element.orderID === req.params.id) {
+		if (element.orderID === req.params.order) {
 			order = order.concat(element);
 		}
 	});

@@ -1,4 +1,5 @@
-//let fileTest = require('../index');
+"use strict";
+
 let request = require('request');
 let assert = require('assert');
 const expect  = require("chai").expect;

@@ -12,7 +12,7 @@ function signIn () {
 	}
 	else {
 				//Send data to server
-		fetch('http://localhost:4500/signin/'+user_name+'/'+pass_word)
+		fetch('https://dokenedgar.herokuapp.com/signin/'+user_name+'/'+pass_word)
 		.then((resp) =>  resp.json())
 		.then((data) => { let user = JSON.parse(JSON.stringify(data));
 			//console.log(user)
@@ -74,7 +74,7 @@ function signUp () {
 	}
 	else {
 		//Send data to server
-		fetch('http://localhost:4500/signup', {
+		fetch('https://dokenedgar.herokuapp.com/signup', {
 			method:'POST',
 		    headers : {'content-type': 'application/json' },
 			body: JSON.stringify({ fname:f_name.value, sname:s_name.value, phone:phone_Num.value, username:user_name.value, pword:password.value })
@@ -95,7 +95,7 @@ function sendMsg () {
 	if (name.length < 2 || msg < 5) {
 		signInerrors.innerHTML = 'Name has to be atleast 2 characters and message at least 5 characters!';
 	}else {
-		fetch('http://localhost:4500/api/v1/'+localStorage.loggedUser+'/messages', {
+		fetch('https://dokenedgar.herokuapp.com/api/v1/'+localStorage.loggedUser+'/messages', {
 			method:'POST',
 			headers: {'content-type': 'application/json' },
 			body: JSON.stringify({sender:name, message:msg})
@@ -118,7 +118,7 @@ function adminsignin () {
 	}
 	else {
 		//window.location.href = './admindashboard.html';
-		fetch('http://localhost:4500/api/v1/admin', {
+		fetch('https://dokenedgar.herokuapp.com/api/v1/admin', {
 			method:'POST',
 			headers: {'content-type': 'application/json' },
 			body: JSON.stringify({uname:user_name, pword:pass_word})

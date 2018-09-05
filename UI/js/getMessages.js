@@ -1,6 +1,6 @@
 let tblHistory = document.getElementById('inbox');
 
-	fetch('http://localhost:4500/api/v1/messages/'+localStorage.loggedUser)
+	fetch('https://dokenedgar.herokuapp.com/api/v1/messages/'+localStorage.loggedUser)
 	.then((resp) => resp.json())
 	.then((data) => { 
 		let orders = JSON.parse(JSON.stringify(data));

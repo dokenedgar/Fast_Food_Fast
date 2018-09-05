@@ -127,7 +127,7 @@ function adminsignin () {
 		.then((data) => { let user = JSON.parse(JSON.stringify(data));
 							if (user.userFound) {
 								localStorage.AdminUser = user_name;//localStorage.removeItem(key)
-								window.location.href = '/api/v1/admin/admindashboard.html';
+								window.location.href = '/api/v1/admindashboard.html';
 							}
 							else {
 								signInerrors.innerHTML = 'Username or password incorrect';

@@ -87,7 +87,7 @@ const expect  = require("chai").expect;
   			done();
   		})
   	});
-
+ 
   	it('Test functionality of logging in a user ', function (done) {
 		  		let options = { 
 		  			  method: 'POST',

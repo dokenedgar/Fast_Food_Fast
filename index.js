@@ -27,7 +27,8 @@ let messagesFromAdmin = [
 
 
 app.get('/', (req,res) => {
-	res.sendFile(path.join(__dirname+'/UI/index.html'));
+	//res.sendFile(path.join(__dirname+'/UI/index.html'));
+	res.sendFile(path.join('/UI/index.html'));
 });
 
 app.get('/index.html', (req,res) => {

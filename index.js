@@ -182,7 +182,7 @@ app.get('/api/v2/admin/orders', (req,res) => {
 });
 
 //GET A USERS ORDERS
-app.get('/api/v2/admin/userorders', (req,res) => {
+app.get('/api/v2/admin/userorders/:order', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/userorders.html'));
 });
 

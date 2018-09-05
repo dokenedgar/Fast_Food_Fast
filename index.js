@@ -37,7 +37,7 @@ app.get('/', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
 
-app.get('/index.html', (req,res) => {
+app.get('/index', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
 
@@ -54,7 +54,7 @@ app.post('/signup',(req, res) => {
 
 });
 
-app.get('/signin.html', (req,res) => {
+app.get('/signin', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/signin.html'));
 });
 
@@ -73,6 +73,7 @@ app.get('/signin/:uname/:pword',(req, res) => {
 
 //Loggen in user nav
 app.get('/api/v1/:user/dashboard', (req,res) => {
+	if (req.params) {}
 	res.sendFile(path.join(__dirname+'/UI/dashboard.html'));
 });
 app.get('/api/v1/:user/orders', (req,res) => {

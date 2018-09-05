@@ -14,12 +14,6 @@ const expect  = require("chai").expect;
   			done();
   		})	
   	});	
-  	it('check type of response - should be not be undefined', function (done) {
-  		request('http://localhost:4500/users', function (error, response, body) {
-  			expect((JSON.stringify(body)).length).to.not.be.undefined;
-  			done();
-  		})
-  	});
 
 });
 

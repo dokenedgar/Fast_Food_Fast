@@ -18,7 +18,7 @@ function signIn () {
 			//console.log(user)
 							if (user.userFound) {
 								localStorage.loggedUser = user_name;//localStorage.removeItem(key)
-								window.location.href = '/api/v1/'+user_name+'/dashboard';
+								window.location.href = 'https://dokenedgar.herokuapp.com/api/v1/'+user_name+'/dashboard';
 							}
 							else {
 								signInerrors.innerHTML = 'Username or password incorrect';

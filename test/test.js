@@ -83,3 +83,12 @@ const expect  = require("chai").expect;
   		})
   	});
   });
+
+  describe('Admin Login', function () {
+  	it('Should be able to reach admin login endpoint', function (done) {
+  		request('http://localhost:4500/api/v1/admin', function (error, response, body) {
+  			expect(response.statusCode).to.equal(200);
+  			done();
+  		})
+  	});
+  });

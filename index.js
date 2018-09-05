@@ -13,10 +13,19 @@ let users = [
 		];
 
 let orders = [];
+let messagesToAdmin = [];
+let messagesFromAdmin = [
+				{receiver: 'McDave', message: 'Order received'}, 
+				{receiver:'Franky', message:'Your order of Rice and burger of Monday 4th April has been completed. Thank you for using our service'},
+				{receiver: 'Franky', message: 'Order accepted'},
+				{receiver:'McDave', message: 'Welcome to Fast Food Fast. Thank you for registering and we hope you have a wonderful experience with us'}
+				];
+
 
 app.get('/', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
+
 app.get('/index.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/index.html'));
 });
@@ -54,16 +63,69 @@ app.get('/signin/:uname/:pword',(req, res) => {
 		
 });
 
-app.get('/api/v1/:user/dashboard.html', (req,res) => {
+//Loggen in user nav
+app.get('/api/v1/:user/dashboard', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/dashboard.html'));
 });
+app.get('/api/v1/:user/orders', (req,res) => {
+	res.sendFile(path.join(__dirname+'/UI/history.html'));
+});
+app.get('/api/v1/:user/messages', (req,res) => {
+	res.sendFile(path.join(__dirname+'/UI/messages.html'));
+});
 
+app.post('/api/v1/:user/messages',(req, res) => {
+	const newMsg = {
+		sender:req.body.sender, message:req.body.message
+	};
+	messagesToAdmin.push(newMsg);
+	res.send(messagesToAdmin);
+});
+
+app.get('/api/v1/messages/:user', (req,res) => {
+	let msgs = [];
+		messagesFromAdmin.forEach( function(element, index) {
+		if (element.receiver === req.params.user) {
+			msgs = msgs.concat(element);
+		}
+	});
+		res.send(msgs);
+});
+
+//GET A USERS ORDERS
+app.get('/api/v1/orders/:user', (req,res) => {
+	let order = [];
+		orders.forEach( function(element, index) {
+		if (element.user === req.params.user) {
+			order = order.concat(element);
+		}
+	});
+		res.send(order);
+});
+//GET SPECIFIC USER ORDER USING ORDER ID
+app.get('/api/v1/:user/:id', (req,res) => {
+		res.sendFile(path.join(__dirname+'/UI/order.html'));
+		
+});
+app.get('/api/v1/orders/:user/:id', (req,res) => {
+	let order = [];
+		orders.forEach( function(element, index) {
+		if (element.orderID === req.params.id) {
+			order = order.concat(element);
+		}
+	});
+		res.send(order);
+});
+
+//PLACE AN ORDER
 app.post('/api/v1/:user/placeOrder', (req,res) => {
-	//const newUser = {
-	//	fname:req.body.fname, sname:req.body.sname, phone:req.body.phone, username:req.body.username, pword:req.body.pword
-	//};
-	//users.push(newUser);
-	res.send('perfect');
+	console.log(req.body);
+	let order_ID = Math.floor(Math.random() * 12345);
+	const newOrder = {
+		orderID:order_ID+req.params.user, user:req.params.user, order: req.body
+	};
+	orders.push(newOrder);
+	res.send(orders);
 
 });
 

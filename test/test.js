@@ -28,15 +28,57 @@ const expect  = require("chai").expect;
 					  url: 'http://localhost:4500/api/v1/:user/placeOrder',
 					  headers: {'content-type': 'application/json' },
 					  body: 
-					   { fname: 'Audu',
-					     sname: 'Maikori',
-					     phone: '2222111114444445',
-					     username: 'auduM',
-					     pword: 'Maudu' },
+					   { food: 'Audu',
+					     price: 'Maikori',
+					     quantity: '2222111114444445'},
 					  json: true };
 
   		request(options, function (error, response, body) {
-  			expect(body).to.contain("perfect");
+  			expect(response.statusCode).to.equal(200);
+  			done();
+  		})
+  	});
+  });
+
+  //GETTING SPECIFIC ORDER API TEST
+  describe('Fetch A Specific Order', function () {
+  	
+  	it('Return status code of 200', function (done) {
+  		request('http://localhost:4500/api/v1/orders/user', function (error, response, body) {
+  			expect(response.statusCode).to.equal(200);
+  			done();
+  		})
+  	});
+
+  	it('Check if a users list of orders is found', function (done) {
+  		request('http://localhost:4500/api/v1/orders/kate', function (error, response, body) {
+  			expect(body).to.not.have.string('food');
+  			done();
+  		})
+  	});
+
+  	  	it('Fetch specific order of a user, using order id', function (done) {
+  		request('http://localhost:4500/api/v1/kate/0987kate', function (error, response, body) {
+  			expect(body).to.have.string('Food');
+  			done();
+  		})
+  	});
+
+  });
+
+  //SENDING MESSAGE API TEST
+  describe('Sending Messages to admin API', function () {
+  	
+  	it('Page exists - Return status code of 200', function (done) {
+  		request('http://localhost:4500/api/v1/user/messages/', function (error, response, body) {
+  			expect(response.statusCode).to.equal(200);
+  			done();
+  		})
+  	});
+
+  	it('Check if order is found', function (done) {
+  		request('http://localhost:4500/api/v1/orders/kate', function (error, response, body) {
+  			
   			done();
   		})
   	});

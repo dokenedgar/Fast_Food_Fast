@@ -17,7 +17,8 @@ function signIn () {
 		.then((data) => { let user = JSON.parse(JSON.stringify(data));
 			//console.log(user)
 							if (user.userFound) {
-								window.location.href = '/api/v1/'+user_name+'/dashboard.html';
+								localStorage.loggedUser = user_name;//localStorage.removeItem(key)
+								window.location.href = '/api/v1/'+user_name+'/dashboard';
 							}
 							else {
 								signInerrors.innerHTML = 'Username or password incorrect';
@@ -80,7 +81,8 @@ function signUp () {
 		})
 		.then((resp) => resp.json())
 		.then((data) => { let obj = JSON.parse(JSON.stringify(data));
-						 window.location.href = '/api/v1/'+obj.username+'/dashboard.html'
+						 localStorage.loggedUser = user_name;
+						 window.location.href = '/api/v1/'+obj.username+'/dashboard'
 						 })
 		.catch((err) => console.log(err))
 	}
@@ -88,7 +90,20 @@ function signUp () {
 }
 
 function sendMsg () {
-	window.location.href = './dashboard.html';
+	let name = document.getElementById('msgName').value;
+	let msg = document.getElementById('txtMsg').value;
+	if (name.length < 2 || msg < 5) {
+		signInerrors.innerHTML = 'Name has to be atleast 2 characters and message at least 5 characters!';
+	}else {
+		fetch('http://localhost:4500/api/v1/'+localStorage.loggedUser+'/messages', {
+			method:'POST',
+			headers: {'content-type': 'application/json' },
+			body: JSON.stringify({sender:name, message:msg})
+		})
+		.then((resp) => {signInerrors.style.color = 'green';
+						signInerrors.innerHTML = 'Message sent successfully' ;})
+		.catch((error) => console.log(error))
+	}
 }
 
 

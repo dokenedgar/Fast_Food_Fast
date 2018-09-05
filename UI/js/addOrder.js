@@ -117,9 +117,24 @@ function addToOrder(CheckBoxelement) {
     }
   }
 }
+//Orderbtn.addEventListener("click", function () {
+  /* body... */
+ // submitOrderButton();
+//})
 
 function submitOrderButton() {
   if (item > 0) {
-    window.location.href = "./history.html";
+    //window.location.href = "./history.html";
+    //Send data to serverlocalStorage.loggedUser = user_name;
+    fetch('/api/v1/'+ localStorage.loggedUser +'/placeOrder', {
+      method:'POST',
+        headers : {'content-type': 'application/json' },
+      body: JSON.stringify(orders)
+    })
+    .then((resp) => resp.json())
+    .then((data) => { let obj = JSON.parse(JSON.stringify(data));
+             window.location.href = '/api/v1/'+localStorage.loggedUser+'/orders';
+             })
+    .catch((err) => console.log(err))
   }
 }

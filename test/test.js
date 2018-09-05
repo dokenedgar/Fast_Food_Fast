@@ -82,7 +82,7 @@ const expect  = require("chai").expect;
 
   describe('Admin Login', function () {
   	it('Should be able to reach admin login endpoint', function (done) {
-  		request('https://dokenedgar.herokuapp.com/api/v1/admin', function (error, response, body) {
+  		request('https://dokenedgar.herokuapp.com/api/v2/admin', function (error, response, body) {
   			expect(response.statusCode).to.equal(200);
   			done();
   		})
@@ -91,7 +91,7 @@ const expect  = require("chai").expect;
   	it('Test functionality of logging in a user ', function (done) {
 		  		let options = { 
 		  			  method: 'POST',
-					  url: 'https://dokenedgar.herokuapp.com/api/v1/admin',
+					  url: 'https://dokenedgar.herokuapp.com/api/v2/admin',
 					  headers: {'content-type': 'application/json' },
 					  body: 
 					   { uname: 'username',
@@ -106,7 +106,7 @@ const expect  = require("chai").expect;
   	});
 
   	it('Test connectivity to admindashboard.html', function (done) {
-  		request('https://dokenedgar.herokuapp.com/api/v1/admin/admindashboard.html', function (error, response, body) {
+  		request('https://dokenedgar.herokuapp.com/api/v2/admin/admindashboard.html', function (error, response, body) {
   			expect(response.statusCode).to.equal(200);
   			done();
   		})

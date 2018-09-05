@@ -156,10 +156,10 @@ app.get('/users',(req, res) => {
 
 
 //ADMIN HOMEPAGE
-app.get('/api/v1/admin', (req,res) => {
+app.get('/admin', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/index.html'));
 });
-app.post('/api/v1/admin',(req, res) => {
+app.post('/api/v2/admin',(req, res) => {
 	let result = {userFound:false};
 	const signInUser = {
 		username:req.body.uname, password:req.body.pword
@@ -172,10 +172,28 @@ app.post('/api/v1/admin',(req, res) => {
 	res.send(result);
 });
 
-app.get('/api/v1/admindashboard.html', (req,res) => {
+app.get('/api/v2/admin/admindashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
 
+app.get('/api/v2/admin/orders', (req,res) => {
+		res.send(orders);
+});
+
+//GET A USERS ORDERS
+app.get('/api/v2/admin/userorders', (req,res) => {
+	res.sendFile(path.join(__dirname+'/fffadmin/userorders.html'));
+});
+
+app.get('/api/v2/admin/orders/:order', (req,res) => {
+	let order = [];
+		orders.forEach( function(element, index) {
+		if (element.orderID === req.params.id) {
+			order = order.concat(element);
+		}
+	});
+		res.send(order);
+});
 //let server = app.listen(80);
 app.listen(PORT, () => console.log('Listening on', PORT));
 

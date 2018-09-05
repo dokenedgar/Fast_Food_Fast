@@ -118,7 +118,7 @@ function adminsignin () {
 	}
 	else {
 		//window.location.href = './admindashboard.html';
-		fetch('https://dokenedgar.herokuapp.com/api/v1/admin', {
+		fetch('https://dokenedgar.herokuapp.com/api/v2/admin', {
 			method:'POST',
 			headers: {'content-type': 'application/json' },
 			body: JSON.stringify({uname:user_name, pword:pass_word})
@@ -127,7 +127,7 @@ function adminsignin () {
 		.then((data) => { let user = JSON.parse(JSON.stringify(data));
 							if (user.userFound) {
 								localStorage.AdminUser = user_name;//localStorage.removeItem(key)
-								window.location.href = '/api/v1/admindashboard.html';
+								window.location.href = '/api/v2/admin/admindashboard.html';
 							}
 							else {
 								signInerrors.innerHTML = 'Username or password incorrect';

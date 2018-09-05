@@ -27,7 +27,7 @@ let messagesFromAdmin = [
 
 
 app.get('https://dokenedgar.herokuapp.com/', (req,res) => {
-	res.sendFile(path.join(__dirname+'/UI/index.html'));
+	res.sendFile(path.join('dokenedgar.herokuapp.com/'+'/UI/index.html'));
 	//res.sendFile(path.join('/UI/index.html'));
 });
 

@@ -1,6 +1,6 @@
 Fast Food Fast
 [![Build Status](https://travis-ci.org/dokenedgar/Fast_Food_Fast.svg?branch=master)](https://travis-ci.org/dokenedgar/Fast_Food_Fast)
-
+[![Coverage Status](https://coveralls.io/repos/github/dokenedgar/Fast_Food_Fast/badge.svg?branch=master)](https://coveralls.io/github/dokenedgar/Fast_Food_Fast?branch=master)
 
 Project Overview
 

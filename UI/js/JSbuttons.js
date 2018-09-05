@@ -24,7 +24,7 @@ function signIn () {
 								signInerrors.innerHTML = 'Username or password incorrect';
 							}
 						 })
-		.catch((err) => console.log(err))//window.alert(err))//
+		.catch((err) => console.log(err))//window.alert(err))// 
 	}
 }
 

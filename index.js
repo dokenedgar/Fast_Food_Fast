@@ -11,6 +11,10 @@ let users = [
 			{fname: 'Yakubu', sname: 'Frank', phone:'12345678900', username:'Franky', pword:'superfrank'},
 			{fname: 'David', sname: 'McKenxie', phone:'09876543211', username: 'McDave', pword: 'pword'}
 		];
+let adminUsers = [
+			{username: 'lionel', password: 'messi'}, 
+			{username: 'sergio', password: 'ramos'}, 
+			];
 
 let orders = [];
 let messagesToAdmin = [];
@@ -54,13 +58,10 @@ app.get('/signin/:uname/:pword',(req, res) => {
 	};
 	users.forEach( function(element) {
 		if ((element.username === signInUser.username) && (element.pword === signInUser.password)) {
-			//user present
 			result.userFound = true;
-			//res.send(signInUser);
 		}
 	});
 	res.send(result);
-		
 });
 
 //Loggen in user nav
@@ -136,6 +137,29 @@ app.get('/logout', (req,res) => {
 //get users
 app.get('/users',(req, res) => {
 	res.status(200).send(users);
+});
+
+
+
+//ADMIN HOMEPAGE
+app.get('/api/v1/admin', (req,res) => {
+	res.sendFile(path.join(__dirname+'/fffadmin/index.html'));
+});
+app.post('/api/v1/admin',(req, res) => {
+	let result = {userFound:false};
+	const signInUser = {
+		username:req.body.uname, password:req.body.pword
+	};
+	adminUsers.forEach( function(element) {
+		if ((element.username === signInUser.username) && (element.password === signInUser.password)) {
+			result.userFound = true;
+		}
+	});
+	res.send(result);
+});
+
+app.get('/api/v1/admin/admindashboard.html', (req,res) => {
+	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
 
 let server = app.listen(4500);

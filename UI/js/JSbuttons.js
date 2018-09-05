@@ -108,14 +108,31 @@ function sendMsg () {
 
 
 function adminsignin (argument) {
-	let username = document.getElementById("txtusername").value;
-	let password = document.getElementById("txtpassword").value;
+	let user_name = document.getElementById("txtusername").value;
+	let pass_word = document.getElementById("txtpassword").value;
 
-	if (username.lenth < 5 || password.length < 5) {
-		window.alert("Input less than 5"); 
+	if (user_name.lenth < 5 || pass_word.length < 5) {
+		//window.alert("Input less than 5"); 
+		signInerrors.innerHTML = 'Username and password have to be at least 5 characters!';
 	}
 	else {
-		window.location.href = './admindashboard.html';
+		//window.location.href = './admindashboard.html';
+		fetch('http://localhost:4500/api/v1/admin', {
+			method:'POST',
+			headers: {'content-type': 'application/json' },
+			body: JSON.stringify({uname:user_name, pword:pass_word})
+		})
+		.then((resp) =>  resp.json())
+		.then((data) => { let user = JSON.parse(JSON.stringify(data));
+							if (user.userFound) {
+								localStorage.AdminUser = user_name;//localStorage.removeItem(key)
+								window.location.href = '/api/v1/admin/admindashboard.html';
+							}
+							else {
+								signInerrors.innerHTML = 'Username or password incorrect';
+							}
+						 })
+		.catch((err) => console.log(err))
 	}
 }
 

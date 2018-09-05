@@ -91,4 +91,28 @@ const expect  = require("chai").expect;
   			done();
   		})
   	});
+
+  	it('Test functionality of logging in a user ', function (done) {
+		  		let options = { 
+		  			  method: 'POST',
+					  url: 'http://localhost:4500/api/v1/admin',
+					  headers: {'content-type': 'application/json' },
+					  body: 
+					   { uname: 'username',
+					     pword: 'password'
+					     },
+					  json: true };
+
+  		request(options, function (error, response, body) {
+  			expect(JSON.parse(JSON.stringify(body)).userFound).to.be.false;
+  			done();
+  		})
+  	});
+
+  	it('Test connectivity to admindashboard.html', function (done) {
+  		request('http://localhost:4500/api/v1/admin/admindashboard.html', function (error, response, body) {
+  			expect(response.statusCode).to.equal(200);
+  			done();
+  		})
+  	});
   });

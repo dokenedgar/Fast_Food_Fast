@@ -44,6 +44,9 @@ app.get('/index', (req,res) => {
 app.get('/signup.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/signup.html'));
 });
+app.get('/signup', (req,res) => {
+	res.sendFile(path.join(__dirname+'/UI/signup.html'));
+});
 
 app.post('/signup',(req, res) => {
 	const newUser = {
@@ -55,6 +58,9 @@ app.post('/signup',(req, res) => {
 });
 
 app.get('/signin', (req,res) => {
+	res.sendFile(path.join(__dirname+'/UI/signin.html'));
+});
+app.get('/signin.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/UI/signin.html'));
 });
 

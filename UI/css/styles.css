@@ -24,7 +24,7 @@ ul {
 }
 /*Header*/
 header {
-  background: url("../images/chef.jpg") no-repeat 0 -250px;
+  background: url("/chef.jpg") no-repeat 0 -250px;
   color: #ffffff;
   min-width: 70px;
 }
@@ -145,7 +145,12 @@ header a:hover {
   font-size: 20px;
   display: block;
 }
-
+#errors {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  color: red;
+}
 button {
   background-color: #403737;
   font-size: 25px;

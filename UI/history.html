@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Fast Food Fast | Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<link rel="stylesheet" type="text/css" href="./css/foodgallery.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="/foodgallery.css">
 </head>
 <body>
 	<header>
@@ -17,78 +17,36 @@
 			<nav>
 				<ul>
 					
-					<li><a href="dashboard.html">Place Order</a></li>
-					<li class="current"><a href="history.html">History</a></li>
-					<li><a href="messages.html">Messages</a></li>
-					<li><a href="signin.html">Log Out</a></li>
+					<li><a href="dashboard">Place Order</a></li>
+					<li class="current"><a href="orders">History</a></li>
+					<li><a href="messages">Messages</a></li>
+					<li><a href="http://localhost:4500/logout">Log Out</a></li>
 				</ul>
 			</nav>
 		</div>
 		</div>
 	</header>
 	<div class="container">
-<h1>Your History</h1>
+<h1>Your Orders</h1>
 	</div>
 
 	<div class="container">
 	
-<table>
+<table id="history">
   <tr>
+    <th>Order ID</th>
     <th>Food</th>
     <th>Quantity</th>
     <th>Price (N)</th>
     <th>Date Ordered</th>
     <th>Status</th>
   </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Pending</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Accepted</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Rejected</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Completed</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Pending</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>3</td>
-    <td>1000</td>
-    <td>24/08/2018</td>
-    <td>Completed</td>
-  </tr>
-  
-  
-</table>
 
-		
-	</div>
-	
+
+
+</table>		
+</div>
+<script src="/history.js"></script>	
 	
 	
 	

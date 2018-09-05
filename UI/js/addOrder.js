@@ -7,7 +7,7 @@ let item = 0;
 let Element_total = document.getElementById("total");
 let totalAmount = 0;
 
-
+let orders = [];
 function addToOrder(CheckBoxelement) {
   let foodName = document.getElementById("foodName");
   let checkValue = CheckBoxelement.value;
@@ -15,6 +15,9 @@ function addToOrder(CheckBoxelement) {
 
   if (CheckBoxelement.checked == true) {
     //quant.value = Number(1);
+    //create order summary object for selected food
+    let newOrder = {food:detail[0], price:detail[1], quantity:detail[2]};
+    orders.push(newOrder);
     totalAmount += Number(detail[1]);
     Element_total.value = "Total: " + totalAmount;
     item++;
@@ -55,11 +58,20 @@ function addToOrder(CheckBoxelement) {
       .addEventListener("click", function() {
         let quant = document.getElementById("Quant" + detail[0]);
         let current = Number(quant.value);
+        
         if (current >= 0) {
           current += 1;
           quant.value = current;
           totalAmount = totalAmount + Number(detail[1]);
           Element_total.value = "Total: " + totalAmount;
+          orders.forEach( function(element, index) {
+              if (element.food===detail[0]) {
+                element.quantity = current;
+                element.price = detail[1] * current ;
+              }
+          });
+          window.alert(JSON.stringify(orders));
+
         }
       });
     document
@@ -72,10 +84,25 @@ function addToOrder(CheckBoxelement) {
           quant.value = current;
           totalAmount = totalAmount - Number(detail[1]);
           Element_total.value = "Total: " + totalAmount;
+          orders.forEach( function(element, index) {
+              if (element.food===detail[0]) {
+                element.quantity = current;
+                element.price = detail[1] * current ;
+              }
+          });
         }
       });
   } else {
     //quant.value = "";
+    window.alert(JSON.stringify(orders));
+    let orderIndex;
+    orders.forEach( function(element, index) {
+         if (element.food === detail[0]) {
+            orderIndex = index;
+         }
+    });
+    orders.splice(orderIndex, 1);
+    window.alert(JSON.stringify(orders));
     item--;
     foodName.innerText = "";
     let quant = document.getElementById("Quant" + detail[0]);
@@ -90,9 +117,24 @@ function addToOrder(CheckBoxelement) {
     }
   }
 }
+//Orderbtn.addEventListener("click", function () {
+  /* body... */
+ // submitOrderButton();
+//})
 
 function submitOrderButton() {
   if (item > 0) {
-    window.location.href = "./history.html";
+    //window.location.href = "./history.html";
+    //Send data to serverlocalStorage.loggedUser = user_name;
+    fetch('/api/v1/'+ localStorage.loggedUser +'/placeOrder', {
+      method:'POST',
+        headers : {'content-type': 'application/json' },
+      body: JSON.stringify(orders)
+    })
+    .then((resp) => resp.json())
+    .then((data) => { let obj = JSON.parse(JSON.stringify(data));
+             window.location.href = '/api/v1/'+localStorage.loggedUser+'/orders';
+             })
+    .catch((err) => console.log(err))
   }
 }

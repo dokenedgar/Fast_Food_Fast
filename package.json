@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
     
   },
   "author": "Doken Edgar",

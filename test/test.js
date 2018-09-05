@@ -7,7 +7,8 @@ const expect  = require("chai").expect;
 
   describe('a different server', function () {
   	it('checks users', function (done) {
-  		request('http://localhost:4500/users', function (error, response, body) {
+
+  		request('https://dokenedgar.herokuapp.com/', function (error, response, body) {
   			//expect(body.length).to.be.below(15);
   			expect(response.statusCode).to.equal(200);
   			done();

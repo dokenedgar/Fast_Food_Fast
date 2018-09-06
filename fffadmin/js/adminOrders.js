@@ -26,7 +26,7 @@ let tblHistory = document.getElementById('adminOrders');
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date();
-				status.innerHTML = '<select><option value='+element.status+'>'+element.status+'</option><option value=""> </option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>'
+				status.innerHTML = '<select><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>'
 				
 			});
 		});

@@ -29,7 +29,7 @@ let tblHistory = document.getElementById('history');
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date();
-				status.innerHTML = 'pending';
+				status.innerHTML = element.status;
 			});
 			
 

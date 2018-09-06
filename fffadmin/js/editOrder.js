@@ -27,7 +27,7 @@ let tblHistory = document.getElementById('history');
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
-				status.innerHTML = '<select ><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>'
+				status.innerHTML = '<select ><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>';
 				updateOrder.innerHTML = "<a href= "+url+">"+Click to update status+"</a>";
 			});
 		});

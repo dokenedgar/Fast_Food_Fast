@@ -27,7 +27,7 @@ let tblHistory = document.getElementById('adminOrders');
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
-				status.innerHTML = '<selec ><option value='+element.status+'>'+element.status+'</option></select>'
+				status.innerHTML = '<selec ><option value='+element.status+'>'+element.status+'</option></select>';
 				updateOrder.innerHTML = "<a href= "+url+">Click to update status+</a>";
 			});
 		});

@@ -7,7 +7,7 @@ let tblHistory = document.getElementById('adminOrders');
 		console.log(orders);
 		orders.forEach( function(element, index) {
 			
-			element.order.forEach( function(elementf, index) {
+				element.order.forEach( function(elementf, index) {
 				let row = tblHistory.insertRow(index+1);
 				let orderID = row.insertCell(0);
 				let userID = row.insertCell(1);
@@ -28,13 +28,8 @@ let tblHistory = document.getElementById('adminOrders');
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
 				status.innerHTML = '<select ><option value='+element.status+'>'+element.status+'</option></select>';
-				//updateOrder.innerHTML = '<a href= '+url+'>Click to update status+</a>';
+				
 			});
 		});
 		})
 	.catch((err) => console.log(err))
-
-function updateOrder () {
-	// body... 
-}
-

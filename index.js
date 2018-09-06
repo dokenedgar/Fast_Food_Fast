@@ -173,7 +173,7 @@ app.post('/api/v2/admin',(req, res) => {
 	res.send(result);
 });
 
-app.get('/api/v2/admin/admindashboard.html', (req,res) => {
+app.get('/api/v2/admin/admindashboard', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
 

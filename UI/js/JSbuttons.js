@@ -95,7 +95,7 @@ function sendMsg () {
 	if (name.length < 2 || msg < 5) {
 		signInerrors.innerHTML = 'Name has to be atleast 2 characters and message at least 5 characters!';
 	}else {
-		fetch('https://dokenedgar.herokuapp.com/api/v1/'+localStorage.loggedUser+'/messages', {
+		fetch('https://dokenedgar.herokuapp.com/api/v1/'+name+'/messages', {
 			method:'POST',
 			headers: {'content-type': 'application/json' },
 			body: JSON.stringify({sender:name, message:msg})

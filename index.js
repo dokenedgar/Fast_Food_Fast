@@ -181,6 +181,17 @@ app.get('/api/v2/admin/orders', (req,res) => {
 		res.send(orders);
 });
 
+app.put('/api/v2/admin/orders/:id', (req,res) => {
+	let order = [];
+		orders.forEach( function(element, index) {
+		if (element.orderID === req.params.id) {
+			element.status = req.body.status;
+			order = order.concat(element);
+		}
+	});
+		res.send(order);
+});
+
 //GET A USERS ORDERS
 app.get('/api/v2/admin/userorders/:order', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/userorders.html'));

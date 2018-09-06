@@ -27,24 +27,12 @@ let tblHistory = document.getElementById('history');
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
-				status.innerHTML = '<select id="status"><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>'
-				updateOrder.innerHTML = '<input id="update" value="UPDATE" readonly onclick="updateOrder()">';
+				status.innerHTML = '<select ><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="fiat">Rejected</option><option value="audi">Completed</option></select>'
+				updateOrder.innerHTML = "<a href= "+url+">"+Click to update status+"</a>";
 			});
 		});
 		})
 	.catch((err) => console.log(err))
 
-function updateOrder () {
-			//Send data to server
-			let newStatus = document.getElementById('status').value;
-		fetch('https://dokenedgar.herokuapp.com/api/v2/admin'+localStorage.orderID, {
-			method:'PUT',
-			headers: {'content-type': 'application/json' },
-			body: JSON.stringify({orderID:localStorage.orderID, status:newStatus})
-		})
-		.then((resp) =>  resp.json())
-		.then((data) => { 
-					window.location.href = 'https://dokenedgar.herokuapp.com/api/v2/admin/orders/'+localStorage.orderID;
-				 })
-		.catch((err) => console.log(err))//window.alert(err))// 
-}
+//NOT NEEDED
+

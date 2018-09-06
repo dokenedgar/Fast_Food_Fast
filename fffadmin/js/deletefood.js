@@ -52,10 +52,8 @@ function deleteDetails () {
 		let f_price = foodPrice.value;
 		let f_desc = foodDesc.value;
 		let signInerrors = document.getElementById('errors');
-		if (f_name.length < 2 || f_price < 2 || f_desc < 5) {
-			signInerrors.innerHTML = 'Name and price have to be atleast 2 characters, while description at least 5 characters!';
-		}
-		else {
+		
+		
 				fetch('https://dokenedgar.herokuapp.com/api/v2/admin/deletefood', {
 				method:'DELETE',
 				headers: {'content-type': 'application/json' },
@@ -64,5 +62,5 @@ function deleteDetails () {
 			.then((resp) => {signInerrors.style.color = 'red';
 							signInerrors.innerHTML = 'Food deleted successfully' ;})
 			.catch((error) => console.log(error))
-		}
+		
 	}

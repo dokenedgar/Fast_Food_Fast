@@ -71,6 +71,13 @@
   margin: 0;
   padding: 0;
 }
+table input {
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid;
+  text-align: center;
+}
 
 table {
   font-family: arial, sans-serif;

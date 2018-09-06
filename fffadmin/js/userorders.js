@@ -37,7 +37,7 @@ let tblHistory = document.getElementById('history');
 function updateOrder () {
 			//Send data to server
 			let newStatus = document.getElementById('status').value;
-		fetch('https://dokenedgar.herokuapp.com/api/v2/admin'+localStorage.orderID, {
+		fetch('https://dokenedgar.herokuapp.com/api/v2/admin/'+localStorage.orderID, {
 			method:'PUT',
 			headers: {'content-type': 'application/json' },
 			body: JSON.stringify({orderID:localStorage.orderID, status:newStatus})

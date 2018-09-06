@@ -16,7 +16,7 @@ let tblHistory = document.getElementById('adminOrders');
 				let price = row.insertCell(4);
 				let dateOrdered = row.insertCell(5);
 				let status = row.insertCell(6);
-				let updateOrder = row.insertCell(7);
+				//let updateOrder = row.insertCell(7);
 
 				let url = 'https://dokenedgar.herokuapp.com/api/v2/admin/userorders/'+element.orderID;
 				localStorage.orderID = element.orderID;
@@ -28,7 +28,7 @@ let tblHistory = document.getElementById('adminOrders');
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
 				status.innerHTML = '<select ><option value='+element.status+'>'+element.status+'</option></select>';
-				updateOrder.innerHTML = '<a href= "+url+">Click to update status+</a>';
+				//updateOrder.innerHTML = '<a href= '+url+'>Click to update status+</a>';
 			});
 		});
 		})

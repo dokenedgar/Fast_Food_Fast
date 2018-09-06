@@ -176,8 +176,12 @@ app.post('/api/v2/admin',(req, res) => {
 app.get('/api/v2/admin/admindashboard.html', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
 });
+
 app.get('/api/v2/admin/messages', (req,res) => {
 		res.sendFile(path.join(__dirname+'/fffadmin/adminmessages.html'));
+});
+app.get('/api/v2/messages/admin', (req,res) => {
+		res.send(messagesToAdmin);
 });
 app.post('/api/v2/admin/messages',(req, res) => {
 	const newMsg = {

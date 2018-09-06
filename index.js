@@ -192,6 +192,17 @@ app.get('/api/v2/admin/addfood', (req,res) => {
 app.get('/api/v2/admin/editfood', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/editfood.html'));
 });
+app.put('/api/v2/admin/editfood', (req,res) => {
+	let order = [];
+		foodList.forEach( function(element, index) {
+		if (element.foodName === req.body.foodName) {
+			element.foodPrice = req.body.foodPrice;
+			element.foodDesc = req.body.foodDesc;
+			order = order.concat(element);
+		}
+	});
+		res.send(order);
+});
 
 app.post('/api/v2/admin/addfood',(req, res) => {
 	const newFood = {

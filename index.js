@@ -203,6 +203,15 @@ app.put('/api/v2/admin/editfood', (req,res) => {
 	});
 		res.send(order);
 });
+app.put('/api/v2/admin/deletefood', (req,res) => {
+	//let order = [];
+		foodList.forEach( function(element, index) {
+		if (element.foodName === req.body.foodName) {
+			foodList.splice(index, 1);
+		}
+	});
+		res.send(foodList);
+});
 
 app.post('/api/v2/admin/addfood',(req, res) => {
 	const newFood = {

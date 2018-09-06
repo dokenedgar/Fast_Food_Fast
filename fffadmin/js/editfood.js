@@ -29,11 +29,11 @@ function getDetails () {
 
 			});
 
-			lblPrice.style.display = 'inline';
-			foodPrice.style.display = 'inline';
-			lblDesc.style.display = 'inline';
-			foodDesc.style.display = 'inline';
-			btnUpdateDetails.style.display = 'inline';
+			lblPrice.style.display = 'block';
+			foodPrice.style.display = 'block';
+			lblDesc.style.display = 'block';
+			foodDesc.style.display = 'block';
+			btnUpdateDetails.style.display = 'block';
 
 			btngetDetails.style.display = 'none';
 

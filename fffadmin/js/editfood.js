@@ -42,3 +42,23 @@ function getDetails () {
 	.catch((err) => console.log(err))
 
 }
+
+function updateDetails () {
+		let f_name = foodName.value;
+		let f_price = foodPrice.value;
+		let f_desc = foodDesc.value;
+		let signInerrors = document.getElementById('errors');
+		if (f_name.length < 2 || f_price < 2 || f_desc < 5) {
+			signInerrors.innerHTML = 'Name and price have to be atleast 2 characters, while description at least 5 characters!';
+		}
+		else {
+				fetch('https://dokenedgar.herokuapp.com/api/v2/admin/editfood', {
+				method:'PUT',
+				headers: {'content-type': 'application/json' },
+				body: JSON.stringify({foodName:f_name, foodPrice:f_price, foodDesc:f_desc})
+			})
+			.then((resp) => {signInerrors.style.color = 'green';
+							signInerrors.innerHTML = 'Food edited successfully' ;})
+			.catch((error) => console.log(error))
+		}
+	}

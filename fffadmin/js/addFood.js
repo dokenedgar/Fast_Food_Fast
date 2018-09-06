@@ -2,6 +2,7 @@
 		let f_name = document.getElementById('foodName').value;
 		let f_price = document.getElementById('foodPrice').value;
 		let f_desc = document.getElementById('desc').value;
+		let signInerrors = document.getElementById('errors');
 		if (f_name.length < 2 || f_price < 2 || f_desc < 5) {
 			signInerrors.innerHTML = 'Name and price have to be atleast 2 characters, while description at least 5 characters!';
 		}

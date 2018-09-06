@@ -1,4 +1,5 @@
 let tblHistory = document.getElementById('inbox');
+let signInerrors = document.getElementById('errors');
 
 	fetch('https://dokenedgar.herokuapp.com/api/v2/messages/admin/')
 	.then((resp) => resp.json())

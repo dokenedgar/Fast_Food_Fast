@@ -203,7 +203,10 @@ app.put('/api/v2/admin/editfood', (req,res) => {
 	});
 		res.send(order);
 });
-app.put('/api/v2/admin/deletefood', (req,res) => {
+app.get('/api/v2/admin/deletefood', (req,res) => {
+	res.sendFile(path.join(__dirname+'/fffadmin/deletefood.html'));
+});
+app.delete('/api/v2/admin/deletefood', (req,res) => {
 	//let order = [];
 		foodList.forEach( function(element, index) {
 		if (element.foodName === req.body.foodName) {

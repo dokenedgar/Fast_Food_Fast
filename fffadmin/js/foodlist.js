@@ -23,7 +23,7 @@ let tblHistory = document.getElementById('inbox');
 				serialNum.innerHTML = index+1;
 				food.innerHTML = elementf.foodName;
 				desc.innerHTML = elementf.foodDesc;
-				price.innerHTML = foodPrice;
+				price.innerHTML = elementf.foodPrice;
 			});
 			
 

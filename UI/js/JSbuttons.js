@@ -81,7 +81,7 @@ function signUp () {
 		})
 		.then((resp) => resp.json())
 		.then((data) => { let obj = JSON.parse(JSON.stringify(data));
-						 localStorage.loggedUser = user_name;
+						 localStorage.loggedUser = user_name.value;
 						 window.location.href = '/api/v1/'+obj.username+'/dashboard'
 						 })
 		.catch((err) => console.log(err))

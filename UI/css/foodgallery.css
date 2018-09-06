@@ -72,9 +72,9 @@
   padding: 0;
 }
 table input {
-  font-size: 15px;
-  margin: 10px;
-  border-radius: 10px;
+  font-size: 10px;
+  margin: 0px;
+  border-radius: 5px;
   border: solid;
   text-align: center;
 }

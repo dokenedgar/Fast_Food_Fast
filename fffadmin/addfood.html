@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fast Food Fast | Add Food</title>
-  <link rel="stylesheet" type="text/css" href="../UI/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="../UI/css/foodgallery.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/foodgallery.css">
 </head>
 <body>
   <header>
@@ -17,14 +17,13 @@
       <nav>
         <ul>
           
-          <li><a href="admindashboard.html">All Orders</a></li>
-          <li><a href="foodlist.html">Food List</a></li>
-          <li class="current"><a href="addfood.html">Add Food</a></li>
-          <li><a href="editfood.html">Edit Food</a></li>
-          <li><a href="deletefood.html">Delete Food</a></li>
-          <li><a href="history.html">Customers</a></li>
-          <li><a href="adminmessages.html">Messages</a></li>
-          <li><a href="index.html">Log Out</a></li>
+                    <li class="current"><a href="/api/v2/admin/admindashboard">All Orders</a></li>
+            <li><a href="/api/v2/admin/admindashboard/foodlist">Food List</a></li>
+            <li><a href="/api/v2/admin/addfood">Add Food</a></li>
+            <li><a href="editfood.html">Edit Food</a></li>
+            <li><a href="deletefood.html">Delete Food</a></li>
+            <li><a href="/api/v2/admin/messages">Messages</a></li>
+            <li><a href="index.html">Log Out</a></li>
         </ul>
       </nav>
     </div>
@@ -36,15 +35,17 @@
       <h1>ADD FOOD ITEM</h1>
       
           <label>Food Display Name:</label>
-          <input type="text">
+          <input type="text" id="foodName">
           <label>Price per serving:</label>
-          <input type="text">
+          <input type="text" id="foodPrice">
           <label>Description:</label>
-          <textarea></textarea><br>
+          <textarea id="desc"></textarea><br>
 
-          <button onclick="action()">Add</button>
+          <button onclick="addFood()">Add</button>
     </div>
+    <p id="errors"></p>
   </div>
+  <script type="text/javascript" src="/addFood.js"></script>
   <footer>
     <p>Fast Food Fast Copyright &copy; 2018</p>
   </footer>

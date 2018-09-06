@@ -24,6 +24,7 @@ let adminUsers = [
 			];
 
 let orders = [];
+let foodList = [];
 let messagesToAdmin = [];
 let messagesFromAdmin = [
 				{receiver: 'McDave', message: 'Order received'}, 
@@ -175,6 +176,24 @@ app.post('/api/v2/admin',(req, res) => {
 
 app.get('/api/v2/admin/admindashboard', (req,res) => {
 	res.sendFile(path.join(__dirname+'/fffadmin/admindashboard.html'));
+});
+
+app.get('/api/v2/admin/foodlist', (req,res) => {
+		res.sendFile(path.join(__dirname+'/fffadmin/foodlist.html'));
+});
+app.get('/api/v2/admin/foodlists', (req,res) => {
+		res.send(foodList);
+});
+
+app.get('/api/v2/admin/addfood', (req,res) => {
+	res.sendFile(path.join(__dirname+'/fffadmin/addfood.html'));
+});
+app.post('/api/v2/admin/addfood',(req, res) => {
+	const newFood = {
+		foodName:req.body.foodName, foodPrice:req.body.foodPrice, foodDesc:req.body.foodDesc
+	};
+	foodList.push(newFood);
+	res.send(foodList);
 });
 
 app.get('/api/v2/admin/messages', (req,res) => {

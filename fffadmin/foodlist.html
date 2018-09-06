@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fast Food Fast | Foodlist</title>
-  <link rel="stylesheet" type="text/css" href="../UI/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="../UI/css/foodgallery.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/foodgallery.css">
 </head>
 <body>
   <header>
@@ -17,14 +17,13 @@
       <nav>
         <ul>
           
-          <li><a href="admindashboard.html">All Orders</a></li>
-          <li class="current"><a href="foodlist.html">Food List</a></li>
-          <li><a href="addfood.html">Add Food</a></li>
-          <li><a href="editfood.html">Edit Food</a></li>
-          <li><a href="deletefood.html">Delete Food</a></li>
-          <li><a href="history.html">Customers</a></li>
-          <li><a href="adminmessages.html">Messages</a></li>
-          <li><a href="index.html">Log Out</a></li>
+                    <li class="current"><a href="/api/v2/admin/admindashboard">All Orders</a></li>
+            <li><a href="/api/v2/admin/admindashboard/foodlist">Food List</a></li>
+            <li><a href="/api/v2/admin/addfood">Add Food</a></li>
+            <li><a href="editfood.html">Edit Food</a></li>
+            <li><a href="deletefood.html">Delete Food</a></li>
+            <li><a href="/api/v2/admin/messages">Messages</a></li>
+            <li><a href="index.html">Log Out</a></li>
         </ul>
       </nav>
     </div>
@@ -36,43 +35,20 @@
 	</div>
 	<hr>
 	<div class="container">
-		<div class="menu-group">
-			<div class="menu-img"><img src="./images/bbq.jpg"> </div>
-			<div class="menu-name">NAME<br>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</div>
-			
-		</div>
+	
+<table id="inbox">
+  <tr>
+    <th>s/n</th>
+    <th>food</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+
+</table><br>
+
 	</div>
-	<hr>
-	<div class="container">
-		<div class="menu-group">
-			<div class="menu-img"><img src="./images/bbq.jpg"> </div>
-			<div class="menu-name">NAME<br>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</div>
-			
-		</div>
-	</div>
-	<hr>
-	<div class="container">
-		<div class="menu-group">
-			<div class="menu-img"><img src="./images/bbq.jpg"> </div>
-			<div class="menu-name">NAME<br>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</div>
-			
-		</div>
-	</div>
-	<hr>
-	<div class="container">
-		<div class="menu-group">
-			<div class="menu-img"><img src="./images/bbq.jpg"> </div>
-			<div class="menu-name">NAME<br>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</div>
-			</div>
-	</div>
-	<hr>
-	<div class="container">
-		<div class="menu-group">
-			<div class="menu-img"><img src="./images/foody.jpg"> </div>
-			<div class="menu-name">NAME<br>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</div>
-			
-		</div>
-	</div>
+	
+	
 	
 <!--
 	<div class="quickwrapper">
@@ -87,6 +63,7 @@
 			</div>			
 		</div>
 	-->
+	<script type="text/javascript" src="/foodlist.js"></script>
 		<footer>
 			
 		<p>Fast Food Fast Copyright &copy; 2018</p>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fast Food Fast | Edit Food</title>
-  <link rel="stylesheet" type="text/css" href="../UI/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="../UI/css/foodgallery.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/foodgallery.css">
 </head>
 <body>
   <header>
@@ -36,15 +36,21 @@
       <h1>EDIT FOOD ITEM</h1>
       
           <label>Food Display Name:</label>
-          <input type="text" value="Rice">
-          <label>Price per serving:</label>
-          <input type="text" value="600">
-          <label>Description:</label>
-          <textarea>Honey beans cooked in palm oil and pepper sauce richly garnished with crayfish and dried fish</textarea><br>
+          <input type="text" id="foodName">
 
-          <button >Update</button>
+          <label id="LabelFoodPrice">Price:</label>
+          <input type="text" id="foodPrice">
+          
+          <label id="LabelFoodDesc">Description</label>
+          <textarea id="foodDesc"></textarea>
+
+
+          <button id="btnUpdateDetails" onclick="updateDetails()">Update Details</button>
+          <button id="btngetDetails" onclick="getDetails()">Get Details</button>
     </div>
+    <p id="errors"></p>
   </div>
+  <script type="text/javascript" src="/editfood.js"></script>
   <footer>
     <p>Fast Food Fast Copyright &copy; 2018</p>
   </footer>

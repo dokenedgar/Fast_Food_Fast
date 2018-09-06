@@ -21,12 +21,12 @@ const expect  = require("chai").expect;
   	it('Post customer selections to the server', function (done) {
 		  		let options = { 
 		  				method: 'POST',
-					  url: 'https://dokenedgar.herokuapp.com/api/v1/:user/placeOrder',
+					  url: 'https://dokenedgar.herokuapp.com/api/v1/testuser/placeOrder',
 					  headers: {'content-type': 'application/json' },
 					  body: 
 					   { food: 'Audu',
-					     price: 'Maikori',
-					     quantity: '2222111114444445'},
+					     price: '345',
+					     quantity: '1'},
 					  json: true };
 
   		request(options, function (error, response, body) {

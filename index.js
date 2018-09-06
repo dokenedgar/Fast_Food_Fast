@@ -185,7 +185,7 @@ app.get('/api/v2/messages/admin', (req,res) => {
 });
 app.post('/api/v2/admin/messages',(req, res) => {
 	const newMsg = {
-		receiver:req.body.sender, message:req.body.message
+		receiver:req.body.receiver, message:req.body.message
 	};
 	messagesFromAdmin.push(newMsg);
 	res.send(messagesFromAdmin);

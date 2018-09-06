@@ -106,7 +106,7 @@ const expect  = require("chai").expect;
   	});
 
   	it('Test connectivity to admindashboard.html', function (done) {
-  		request('https://dokenedgar.herokuapp.com/api/v2/admin/admindashboard.html', function (error, response, body) {
+  		request('https://dokenedgar.herokuapp.com/api/v2/admin/admindashboard', function (error, response, body) {
   			expect(response.statusCode).to.equal(200);
   			done();
   		})

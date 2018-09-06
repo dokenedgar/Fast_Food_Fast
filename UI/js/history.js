@@ -23,7 +23,7 @@ let tblHistory = document.getElementById('history');
 				food.innerHTML = elementf.food;
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
-				dateOrdered.innerHTML = new Date();
+				dateOrdered.innerHTML = new Date().toUTCString();
 				status.innerHTML = 'pending';
 			});
 		});

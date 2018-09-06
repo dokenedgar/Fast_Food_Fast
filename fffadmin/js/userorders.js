@@ -28,7 +28,7 @@ let updateOrder;// = row.insertCell(7);
 				quantity.innerHTML = elementf.quantity;
 				price.innerHTML = elementf.price;
 				dateOrdered.innerHTML = new Date().toUTCString();
-				status.innerHTML = '<select onchange"updateOrder()" id="status"><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option><option value="Completed">Completed</option></select>'
+				status.innerHTML = '<select id="status"><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option><option value="Completed">Completed</option></select>'
 				
 			});
 			updateOrder.innerHTML = '<input id="update" value="UPDATE" readonly onclick="updateOrder()">';

@@ -31,12 +31,12 @@ let updateOrder;// = row.insertCell(7);
 				status.innerHTML = '<select id="status"><option value='+element.status+'>'+element.status+'</option><option value="Accepted">Accepted</option><option value="Rejected">Rejected</option><option value="Completed">Completed</option></select>'
 				
 			});
-			updateOrder.innerHTML = '<input id="update" value="UPDATE" readonly onclick="updateOrder()">';
+			updateOrder.innerHTML = '<input id="update" value="UPDATE" readonly onclick="updateOrderFunction()">';
 		});
 		})
 	.catch((err) => console.log(err))
 
-function updateOrder () {
+function updateOrderFunction () {
 			//Send data to server
 			let newStatus = document.getElementById('status').value;
 		fetch('https://dokenedgar.herokuapp.com/api/v2/admin/orders/'+localStorage.orderID, {

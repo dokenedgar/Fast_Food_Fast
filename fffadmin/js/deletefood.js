@@ -30,6 +30,8 @@ function getDetails () {
 			});
 
 			foodName.readOnly = true;
+			foodPrice.readOnly = true;
+			foodDesc.readOnly = true;
 
 			lblPrice.style.display = 'block';
 			foodPrice.style.display = 'block';
@@ -45,7 +47,7 @@ function getDetails () {
 
 }
 
-function updateDetails () {
+function deleteDetails () {
 		let f_name = foodName.value;
 		let f_price = foodPrice.value;
 		let f_desc = foodDesc.value;
@@ -54,13 +56,13 @@ function updateDetails () {
 			signInerrors.innerHTML = 'Name and price have to be atleast 2 characters, while description at least 5 characters!';
 		}
 		else {
-				fetch('https://dokenedgar.herokuapp.com/api/v2/admin/editfood', {
-				method:'PUT',
+				fetch('https://dokenedgar.herokuapp.com/api/v2/admin/deletefood', {
+				method:'DELETE',
 				headers: {'content-type': 'application/json' },
 				body: JSON.stringify({foodName:f_name, foodPrice:f_price, foodDesc:f_desc})
 			})
-			.then((resp) => {signInerrors.style.color = 'green';
-							signInerrors.innerHTML = 'Food edited successfully' ;})
+			.then((resp) => {signInerrors.style.color = 'red';
+							signInerrors.innerHTML = 'Food deleted successfully' ;})
 			.catch((error) => console.log(error))
 		}
 	}

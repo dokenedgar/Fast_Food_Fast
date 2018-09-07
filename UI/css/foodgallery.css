@@ -71,11 +71,7 @@
   margin: 0;
   padding: 0;
 }
-#food-menu table, td, tr{
-  border: none;
-  width: 80%;
-  text-align: left;
-}
+
 table input {
   font-size: 10px;
   margin: 0px;
@@ -120,11 +116,14 @@ th {
 #inbox tr:nth-child(even) {
   background-color: lightgray;
 }
-
-#checkout {
-  position: fixed;
+/*
   right: 0;
   top: 1;
+  */
+#checkout {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 1;
   text-align: right;
   display: block;

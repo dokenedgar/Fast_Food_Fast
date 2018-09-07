@@ -1,39 +1,36 @@
-"use strict";
+'use strict';
 
 let request = require('request');
 let assert = require('assert');
-const expect  = require("chai").expect;
-//const { expect } = require('chai');
+const expect = require('chai').expect;
+// const { expect } = require('chai');
 
-  describe('a different server', function () {
-  	it('checks users', function (done) {
-
-  		request('https://dokenedgar.herokuapp.com/', function (error, response, body) {
-  			//expect(body.length).to.be.below(15);
-  			expect(response.statusCode).to.equal(200);
-  			done();
-  		})	
-  	});	
-
+describe('a different server', function () {
+  it('checks users', function (done) {
+    request('https://dokenedgar.herokuapp.com/', function (error, response, body) {
+      expect(response.statusCode).to.equal(200);
+      done();
+    })
+  });
 });
 
-  describe('Customer Placing A New Order', function () {
-  	it('Post customer selections to the server', function (done) {
-		  		let options = { 
-		  				method: 'POST',
-					  url: 'https://dokenedgar.herokuapp.com/api/v1/testuser/placeOrder',
-					  headers: {'content-type': 'application/json' },
-					  body: 
-					   { food: 'Audu',
-					     price: '345',
-					     quantity: '1'},
-					  json: true };
+describe('Customer Placing A New Order', function () {
+  it('Post customer selections to the server', function (done) {
+    let options = {
+      method: 'POST',
+      url: 'https://dokenedgar.herokuapp.com/api/v1/testuser/placeOrder',
+      headers: { 'content-type': 'application/json' },
+      body:
+        { food: 'Audu',
+        price: '345',
+        quantity: '1' },
+        json: true };
 
-  		request(options, function (error, response, body) {
-  			expect(response.statusCode).to.equal(200);
-  			done();
-  		})
-  	});
+    request(options, function (error, response, body) {
+      expect(response.statusCode).to.equal(200);
+      done();
+    })
+  });
   });
 
   //GETTING SPECIFIC ORDER API TEST

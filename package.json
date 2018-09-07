@@ -4,7 +4,8 @@
   "description": "Web app for Fast Food Fast services",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git"
@@ -25,8 +26,10 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^13.0.1",
     "request": "^2.88.0"
   },
   "engines": {

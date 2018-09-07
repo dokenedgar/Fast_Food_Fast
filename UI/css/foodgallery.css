@@ -80,10 +80,14 @@ table input {
   text-align: center;
 }
 
+#food-menu table {
+  width: 90%;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
 }
 
 td,
@@ -123,7 +127,7 @@ th {
 #checkout {
   position: fixed;
   right: 0;
-  bottom: 1;
+  bottom: 0;
   z-index: 1;
   text-align: right;
   display: block;

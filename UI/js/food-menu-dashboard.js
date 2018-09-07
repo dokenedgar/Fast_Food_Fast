@@ -18,9 +18,10 @@ fetch('https://dokenedgar.herokuapp.com/index/foodlist')
       desc.innerHTML = elementf.foodDesc;
       price.innerHTML = elementf.foodPrice;
       checkboxAddToOrder.innerHTML = '<input type="checkbox" name="myCheck" id="myCheck" onchange="addToOrder(this)" value="' + elementf.foodName + ',' + elementf.foodPrice + ',' + 1 + '" >'
-      img.innerHTML = '<img src="/bbq.jpg" id="image">'
+      /*img.innerHTML = '<img src="/bbq.jpg" id="image">'
       document.getElementById('image').style.height = '100px';
       document.getElementById('image').style.width = '200px';
+      */
     });
   })
   .catch((err) => console.log(err))

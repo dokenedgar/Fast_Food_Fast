@@ -71,6 +71,11 @@
   margin: 0;
   padding: 0;
 }
+#food-menu table, td, tr{
+  border: none;
+  width: 80%;
+  text-align: left;
+}
 table input {
   font-size: 10px;
   margin: 0px;

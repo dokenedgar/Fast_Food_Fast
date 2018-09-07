@@ -4,8 +4,7 @@
   "description": "Web app for Fast Food Fast services",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    
+    "test": "mocha"
   },
   "repository": {
     "type": "git"

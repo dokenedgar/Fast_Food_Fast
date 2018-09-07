@@ -12,7 +12,7 @@ fetch('https://dokenedgar.herokuapp.com/index/foodlist')
       let desc = row.insertCell(2);
       let price = row.insertCell(3);
       let checkboxAddToOrder = row.insertCell(4);
-      let img = row.insertCell(5);
+  
       serialNum.innerHTML = index + 1;
       food.innerHTML = elementf.foodName;
       desc.innerHTML = elementf.foodDesc;

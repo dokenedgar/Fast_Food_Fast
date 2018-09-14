@@ -6,3 +6,6 @@ Fast Food Fast
 Project Overview
 
 Fast-Food-Fast is a food delivery service app for a restaurant.
+
+UPDATE:
+This is deprecated, latest work is at https://github.com/dokenedgar/FFF-Handlebars

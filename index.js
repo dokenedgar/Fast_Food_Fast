@@ -3,7 +3,7 @@ let app = express();
 let path = require('path');
 
 // Get the port:
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3033;
 // Listen on the port:
 
 app.use(express.static(path.join(__dirname, '/UI/css')));
@@ -289,6 +289,7 @@ app.get('/api/v2/admin/food/:name', (req, res) => {
   res.send(order);
 });
 // let server = app.listen(80);
-app.listen(PORT, () => console.log('Listening on', PORT));
+app.listen(PORT, 'localhost');//() => console.log('Listening on', PORT));
 
 // module.exports = server
+module.exports = app;

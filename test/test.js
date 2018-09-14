@@ -5,6 +5,14 @@ let assert = require('assert');
 const expect = require('chai').expect;
 // const { expect } = require('chai');
 
+let add = require('../example.js');
+
+describe('suite', function () {
+  it('expectation', function () {
+    assert.equal(add(1,2), 3);
+  });
+});
+
 describe('a different server', function () {
   it('checks users', function (done) {
     request('https://dokenedgar.herokuapp.com/', function (error, response, body) {

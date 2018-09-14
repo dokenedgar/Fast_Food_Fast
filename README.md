@@ -3,7 +3,6 @@ Fast Food Fast
 
 [![Coverage Status](https://coveralls.io/repos/github/dokenedgar/Fast_Food_Fast/badge.svg?branch=master)](https://coveralls.io/github/dokenedgar/Fast_Food_Fast?branch=master)
 
-
 Project Overview
 
 Fast-Food-Fast is a food delivery service app for a restaurant.
